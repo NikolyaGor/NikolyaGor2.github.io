@@ -1,0 +1,235 @@
+/*selector {свойство: значение } */
+/* padding: 15px; внутр отступы */
+/* margin(-top-left etc):15px;  внешн отступы */
+/* border 7px solid(dashed) color */
+/* border-radius: 5px; закругление границы */
+/* opacity: 0..1; прозрачность элемента */
+/* box-shadow: sdvigX(px), sdvigY(px), mulo(px), color; тень элемента */
+/* width/hight: 23px; ширина высота */
+/* display: block; none - скрыть элемент */
+/* text-align: left; center,right - выравнивание текста */
+/* font-weight: 400; - жирность текста */
+/* transform: имя-функции()   rotate(90deg)  scale(st = 1.0 -> 0.5) */
+/* transition: sec(o.5s) (что) background-color:red; */
+/* russeller.com */
+*{
+	padding:0;
+	margin:0;
+}
+/* по тэгу */
+body{
+	background: rgb(1,0,6);
+	background: linear-gradient(0deg, rgba(1,0,6,1) 13%, rgba(10,0,59,1) 100%);
+	color:white;
+	font-family: cambria;
+	font-weight:400;
+	font-style:normal;
+	font-size:20;
+	font-variant:normal;
+	line-height: normal;
+}
+li{
+	list-style-type: none;
+	list-style-image: none;
+}
+h1[title]:hover{
+	font-size:40px;
+	color:red;
+}
+p[title="box1"]:hover{
+	color:red;
+}
+/* дочерние */
+p>em:hover{
+	color:red;
+}
+/* контекстные */
+div p :hover{
+	color:red;
+}
+/* соседние */
+b+i{
+	color:red;
+}
+/* по id */
+#menu{
+	height: 70px;
+	width: 1000px;
+	color:black;
+	margin: 0 auto;	
+}
+/* шапка */
+#menu ul li{
+	float:left;	
+	position:relative;	
+	height:70 px;
+	width:250px;
+}
+#menu ul li a{
+	padding: 0 25px;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 39%, rgba(148,148,148,1) 100%);
+	color:black;
+	text-decoration:none;
+	display:block;	
+	line-height:70px;	
+}
+#menu ul li a:hover{
+	background: rgb(1,0,6);
+	background: linear-gradient(180deg, rgba(1,0,6,1) 13%, rgba(36,36,36,1) 100%);
+	color: white;
+}
+#menu li:hover .drop { display: block;}
+#menu .drop {
+	position:absolute;
+	top:100%;
+	background: rgb(36,36,36);
+	background: linear-gradient(180deg, rgba(1,0,6,1) 13%, rgba(36,36,36,1) 100%); 
+	color:white;
+	display:none;	
+}
+#menu .drop li {
+	width: 100%;
+	hight:500px;
+	z-index:1;
+}
+#menu .drop li a{
+	line-height:45px;
+}
+#content {
+    box-sizing: border-box;
+    padding: 2% 10% 0 10% ;
+}
+/* адаптивная таблица */
+.table {
+	width:100%;
+	border-collapse: collapse; 
+}
+.table td{
+	/* padding: 5px; */
+	position:relative;
+	padding-top:3%;
+}
+.wrapper{
+	width:95%;
+	margin: 0 auto;	
+}
+/* оптимизация галереи под телефон */
+@media screen and (max-width:1350px){
+	.table td{
+		display:block;
+		padding-left: 25%;
+		padding-top:10%;
+	}
+	.table td img{
+		width:400px;		
+	}
+	
+}
+/* увеличение */
+.scale {
+	transition: 1s;
+}
+.scale:hover {
+	transform: scale(2); 
+	z-index:1;
+}
+/* подсказка */
+.tooltip{
+    display: inline-block; 
+    position: relative; 
+   }
+.tooltip:hover::after {
+    content: attr(data-title); 
+    position: absolute; 
+    left: 10%; top: -100%; 
+    z-index: 1;
+    background: rgba(0,0,0,0.9); 
+	color: white;
+    font-family: Arial, sans-serif; 
+    font-size: 11px; 
+    padding: 5px 10px; 
+    border: 1px solid #333;
+	border-radius: 5px;
+	box-shadow: 3 3 7 white;
+}
+.flexbox{
+	display:flex;
+	align-items: stretch;
+	flex-direction: row;	
+	flex-wrap:wrap;
+}
+.flexbox div{
+	padding:12px;
+	border: 2px solid white;
+}
+.box{
+	width:20%;
+	justify-content:space-around;
+	font-family: "CR";
+	font-size:26px;
+}
+.square{
+	position:absolute;
+	width:100px;
+	height:100px;
+	margin:20px auto;
+	background-color:white;
+	animation: movR 10s linear infinite, spin 10s linear infinite;
+}
+@keyframes spin{
+	from{
+		transform:rotate(0deg);
+		
+	}	
+	25%{
+		background-color:lime;
+	}
+	75%{
+		background-color:red;
+	}
+	to{
+		background-color:white;
+		transform:rotate(360deg);
+	}
+}
+@keyframes movR{
+	from{left:0;}
+	to{left:100%;}
+}
+@font-face {
+	font-family: "CR";
+	src: url('fonts/CR.eot');
+	src: local('☺'), 
+	url('fonts/CR.woff') format('woff'),
+	url('fonts/CR.ttf') format('truetype'),
+	url('fonts/CR.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

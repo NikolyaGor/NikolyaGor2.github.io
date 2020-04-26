@@ -1,0 +1,47 @@
+<html>
+
+	<head> 
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+	
+	<body>
+	
+		<div id="top"> 
+			<div id="menu">
+				<ul> 
+				<li> <a target="main" href="index.html"> <i class="fa fa-home" aria-hidden="true"> </i>Главная страница</a></li> 
+				<li> <a target="main" href="events.html">  <i class="fa fa-users" aria-hidden="true"> </i> Персонажи</a>
+					<ul class="drop"> 
+						<li><a class="pers con" target="main" href="connor.html">  <i class="fa fa-user" aria-hidden="true"></i> Коннор </a> </li>
+						<li><a class="pers mark" target="main" href="markus.html"> <i class="fa fa-user" aria-hidden="true"></i> Маркус </a> </li>	
+						<li><a  class="pers kara"target="main" href="kara.html" > <i class="fa fa-user" aria-hidden="true"></i> Кэра  </a>  </li>	
+						<li><a  href="dop.html">  <i class="fa fa-user" aria-hidden="true"></i>Дополнительно</a></li>
+					</ul> </li> 
+				<li> <a  target="main" href="gallery.html">    <i class="fa fa-picture-o" aria-hidden="true"></i>    Галерея</a> </li>	
+				<li> <a  target="_parent" href="http://fivt.chuvsu.ru/kurs2/" ><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>  Возврат к датам</a> </li>
+			</div>
+		</div>
+		
+		<div id="Content">		
+			<p align=center> Персонажи </p>
+			<p align=center><img width=750 src="images\events.png" usemap="#persons"></p>
+
+			<map name="persons">
+				<area shape="poly" coords="0,0,293,0,163,420,0,420" a target="main" href="connor.html" alt="connor">
+				<area shape="poly" coords="293,0,470,0,605,420,163,420" a target="main" href="markus.html" alt="connor">
+				<area shape="poly" coords="470,0,750,0,750,420,605,420" a target="main" href="kara.html" alt="connor">
+				
+			<table width="100%">
+				<tr>
+					<td width="50%" height=50 ><a  target="main" href="index.html"> <img  height=50 width=60 style="transform:rotate(180deg)" src="images\strela.png"> </a></td>
+					<td width="50%" height=50 ><a  target="main" href="gallery.html"> <img align=right height=50 width=60 src="images\strela.png"> </a></td>
+				</tr>
+
+			</table>
+		</div>
+		
+	</body>
+	
+</html>
